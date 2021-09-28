@@ -20,8 +20,8 @@ export class ListarLivrosComponent implements OnInit {
       new Livro(2, "O Crepusculo dos Idolos",true),
       new Livro(3, "Deuses Americanos", false)
     ]
-
   }
+  
   listarTodos(): Livro[] {
     return this.livroService.listarTodos();
   }
