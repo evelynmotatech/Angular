@@ -15,7 +15,7 @@ export class LivroService {
     const livros = this.listarTodos();
     livro.id = new Date().getTime();
     livros.push(livro);
-    localStorage['livro'] = JSON.stringify(livro)
+    localStorage['livros'] = JSON.stringify(livros)
   }
 
   buscarPorId(id: number):Livro{
@@ -38,15 +38,14 @@ export class LivroService {
     livros = livros.filter(livros => livros.id !== id);
     localStorage['livros'] = JSON.stringify(livros);
   }
-
-  alterarStatus(id: number):void{
-    const livros : Livro[] = this.listarTodos();
-    livros.forEach((obj, index, objs)=>{
+  
+  alterarStatus(id:number):void{
+    const livros: Livro[] = this.listarTodos();
+    livros.forEach((obj, index, objs) =>{
       if(id === obj.id){
         objs[index].concluido = !obj.concluido;
       }
-    });
-    localStorage['livros'] = JSON.stringify(livros);
+      localStorage['livros'] = JSON.stringify(livros);
+    })
   }
-
 }
