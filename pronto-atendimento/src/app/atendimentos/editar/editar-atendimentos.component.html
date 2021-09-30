@@ -1,0 +1,37 @@
+<h1>Editar atendimento</h1>
+
+<div class="well">
+  <form #formAtendimento="ngForm">
+    <div class="form-group">
+      <label for="nome">Paciente:</label>
+      <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]= "atendimento.nome" #nome="ngModel" minlength="5" required>  
+      <div *ngIf="nome.errors && (nome.dirty || nome.touched)" class="alert alert-danger">
+        <div [hidden]= "!nome.errors.required">
+          Digite o nome do paciente.
+        </div>
+        <div [hidden]="!nome.errors.minlength">
+          A nome deve conter ao menos 3 caracteres.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="prioridade">Prioridade:</label>
+      <input type="text" class="form-control" id="prioridade" name="prioridade" [(ngModel)]="atendimento.prioridade"
+        #prioridade="ngModel" minlength="2" required>
+      <div *ngIf="prioridade.errors && (prioridade.dirty || prioridade.touched)" class="alert alert-danger">
+        <div [hidden]="!prioridade.errors.required">
+          Defina se é atendimento prioritário ou não.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group text-center">
+      <input type="submit" class="btn btn-success"  value="Atualizar" (click)="atualizar()" [disabled]="!formAtendimento.form.valid">
+
+      <a class="btn btn-default" [routerLink]="['/atendimentos/listar']">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Voltar
+      </a>
+    </div>
+  </form>
+</div>
