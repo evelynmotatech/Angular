@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sistema-pronto-atendimento": {
+    "jogo-da-velha": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
-          "strict": false
+          "strict": true
         }
       },
       "root": "",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sistema-pronto-atendimento",
+            "outputPath": "dist/jogo-da-velha",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,8 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -69,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "sistema-pronto-atendimento:build:production"
+              "browserTarget": "jogo-da-velha:build:production"
             },
             "development": {
-              "browserTarget": "sistema-pronto-atendimento:build:development"
+              "browserTarget": "jogo-da-velha:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sistema-pronto-atendimento:build"
+            "browserTarget": "jogo-da-velha:build"
           }
         },
         "test": {
@@ -103,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "sistema-pronto-atendimento"
+  "defaultProject": "jogo-da-velha"
 }
