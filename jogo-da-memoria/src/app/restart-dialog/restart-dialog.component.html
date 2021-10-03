@@ -1,0 +1,17 @@
+<!-- modal que será exibido quando o jogo for ganho -->
+
+<h2 mat-dialog-title>Parabéns!</h2>
+<mat-dialog-content class="mat-typography">
+    <p id="vitoria">
+        Você capturou todos os Pokemon!<br>
+        E ganhou uma insígnia
+    </p>
+</mat-dialog-content>
+<mat-dialog-actions align="end" >
+    <div id="alinhar">
+        <img src="https://media.giphy.com/media/vnGlErQHuF9BK/giphy.gif">
+        <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial>Capturar mais Pokemon</button>
+
+    </div>
+    
+</mat-dialog-actions>

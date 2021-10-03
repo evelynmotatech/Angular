@@ -1,0 +1,21 @@
+<mat-toolbar class="pokemon">
+  <div>Jogo da Memória Pokémon</div>
+</mat-toolbar>
+<div id="musica">
+  <audio autoplay="autoplay" controls="controls" loop id="myaudio">
+    <source src="../assets/audio/Pokemon123.mp3" type="audio/mp3" />
+    seu navegador não suporta HTML5
+  </audio>
+</div>
+
+<div class="p-16">
+  <div class="text-center">
+    <p>Clique numa carta para encontrar um Pokémon.</p>
+    <p>Se você encontrar dois Pokémon iguais, você os captura!</p>
+  </div>
+  <div class="grid p-16">
+    <app-jogo-da-memoria *ngFor="let c of cards; let idx=index" [data]="c" (cardClicked)="cardClicked(idx)">
+    </app-jogo-da-memoria>
+  </div>
+
+</div>

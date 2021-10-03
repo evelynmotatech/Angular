@@ -1,0 +1,50 @@
+.grid {
+    display              : grid;
+    grid-template-columns: repeat(6, 150px);
+    gap                  : 20px;
+    justify-content      : center;
+    
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 150px);
+    }
+}
+
+.pokemon {
+    height         : 15vh;
+    display        : flex;
+    justify-content: center;
+    align-content  : center;
+    align-items    : center;
+    font-family    : 'Pokemon Solid', sans-serif;
+    font-size      : 3rem;
+    background     : #ED3237;
+    color          : #FFCB05;
+    text-shadow    : #3C5BA7 10px 10px 10px;
+    box-shadow     : black 5px 5px 10px;
+
+}
+
+.pokemon div {
+    margin-bottom: 20px;
+}
+
+.p-16 {
+    text-align: center;
+}
+
+.text-center {
+    margin-top   : 30px;
+    margin-bottom: 40px;
+    font-size    : x-large;
+    font-weight  : 700;
+    font-family  : 'Roboto Condensed', sans-serif;
+}
+
+#musica{
+      position: fixed;
+      bottom: 20px;
+      
+}
